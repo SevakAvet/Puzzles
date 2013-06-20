@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vetrova.puzzles"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/puzzle"
+        android:label="@string/app_name" >
+        
+        <activity
+            android:name="com.vetrova.puzzles.StarterActivity"
+		    android:configChanges="orientation"
+		    android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.vetrova.puzzles.main_menu.MainMenuActivity"
+		    android:configChanges="orientation"
+		    android:screenOrientation="portrait"
+            android:theme="@style/AppCustomTheme" >
+        </activity>
+        
+        <activity
+            android:name="com.vetrova.puzzles.newgame_menu.NewGameMenuActivity"
+		    android:configChanges="orientation"
+		    android:screenOrientation="portrait"
+            android:theme="@style/AppCustomTheme" >
+        </activity>
+        
+        <activity
+            android:name="com.vetrova.puzzles.game.FullImageActivity"
+		    android:configChanges="orientation"
+		    android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        
+        <activity
+            android:name="com.vetrova.puzzles.game.PuzzlesActivity"
+		    android:configChanges="orientation"
+		    android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        
+        <activity
+            android:name="com.vetrova.puzzles.rating.RatingActivity"
+		    android:configChanges="orientation"
+		    android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        
+    </application>
+
+</manifest>

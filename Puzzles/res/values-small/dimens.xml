@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="text_size">17sp</dimen>
+    <dimen name="radio_text_size">11sp</dimen>
+    <dimen name="margin_left">25dp</dimen>
+    <dimen name="icon_margin_left">15dp</dimen>
+    <dimen name="icon_margin_top">20dp</dimen>
+    <dimen name="icon_between_margin">20dp</dimen>
+    <dimen name="icon_size">80dp</dimen>
+    <dimen name="image_between_margin">10dp</dimen>
+    <dimen name="image_leftRight_margin">10dp</dimen>
+    
+    <dimen name="gallery_margin_bottom">40dp</dimen>
+    <dimen name="scrollView_margin_top">50dp</dimen>
+    <dimen name="radioGroup_margin_top">20dp</dimen>
+    <dimen name="radioButton_margin">10dp</dimen>
+
+</resources>

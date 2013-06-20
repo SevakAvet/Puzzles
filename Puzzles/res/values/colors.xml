@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="lattice_color">#ffcccccc</color>
+    <color name="commutable_puzzle_color">#4fb8ea8b</color>
+    <color name="menu_background_color">#ffffff</color>
+    <color name="menu_text_color">#0f0f0f</color>
+    <color name="disabled_gallery_text_color">#bababa</color>
+    
+</resources>

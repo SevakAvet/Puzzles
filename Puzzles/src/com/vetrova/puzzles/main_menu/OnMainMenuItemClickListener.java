@@ -1,0 +1,86 @@
+package com.vetrova.puzzles.main_menu;
+
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Toast;
+
+import com.vetrova.puzzles.R;
+import com.vetrova.puzzles.game.FullImageActivity;
+import com.vetrova.puzzles.gameutils.GlobalStorage;
+import com.vetrova.puzzles.newgame_menu.NewGameMenuActivity;
+import com.vetrova.puzzles.rating.RatingActivity;
+
+public class OnMainMenuItemClickListener implements OnClickListener {
+	private MainMenuActivity activity;
+	private Animation anim;
+	
+	public OnMainMenuItemClickListener(MainMenuActivity activity) {
+		this.activity = activity;
+		anim = AnimationUtils.loadAnimation(activity, R.anim.click_anim);
+	}
+
+	@Override
+	public void onClick(View v) {
+		v.startAnimation(anim);
+		switch (v.getId()) {
+		case R.id.playItem:
+			onPlayClick();
+			break;
+		
+		case R.id.loadItem:
+			onContinueGameClick();
+			break;
+
+		case R.id.ratingItem:
+			onRatingClick();
+			break;
+		
+		case R.id.paidItem:
+			onPaidClick();
+			break;
+		}
+	}
+	
+	private void onPlayClick() {
+		startActivity(NewGameMenuActivity.class);
+	}
+	
+	private void startActivity(Class<?> activityClass) {
+		Intent intent = new Intent(activity, activityClass);
+		activity.startActivity(intent);
+	}
+
+	private void onContinueGameClick() {
+		Bitmap bitmap = tryLoadBitmap();
+		if (bitmap != null) {
+			GlobalStorage.setBitmap(bitmap);
+			startActivity(FullImageActivity.class);
+		} else {
+			GlobalStorage.setNotExistSavedGameAndState();
+			activity.updateItemsClickability();
+		}
+	}
+	
+	private Bitmap tryLoadBitmap() {
+		try {
+			return GlobalStorage.getBitmapDescriptor().getBitmap();
+		} catch (Exception e) {
+			return null;
+		}
+	}
+	
+	private void onRatingClick() {
+		Intent intent = new Intent(activity, RatingActivity.class);
+		intent.putExtra(RatingActivity.MODE, RatingActivity.SHOW_ONLY_RATING_MODE);
+		activity.startActivity(intent);
+	}
+
+	private void onPaidClick() {
+		// TODO Auto-generated method stub
+		Toast.makeText(activity, "Showing paid features...", Toast.LENGTH_SHORT).show();
+	}
+}

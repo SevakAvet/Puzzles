@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Пазлы</string>
+    <string name="new_game">Новая игра</string>
+    <string name="load_game">Продолжить</string>
+    <string name="rating">Рейтинг</string>
+    <string name="paid_features">Платные фичи</string>
+    <string name="difficult_easy">Легкий</string>
+    <string name="difficult_medium">Средний</string>
+    <string name="difficult_hard">Тяжелый</string>
+    <string name="gallery">Галлерея</string>
+    <string name="result_text">Вы набрали (очков):</string>
+
+</resources>

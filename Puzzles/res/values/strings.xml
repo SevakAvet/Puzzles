@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Puzzles</string>
+    <string name="new_game">New game</string>
+    <string name="load_game">Continue</string>
+    <string name="rating">Rating</string>
+    <string name="paid_features">Paid features</string>
+    <string name="difficult_easy">Easy</string>
+    <string name="difficult_medium">Medium</string>
+    <string name="difficult_hard">Hard</string>
+    <string name="gallery">Gallery</string>
+    <string name="result_text">You scored (points):</string>
+
+</resources>
