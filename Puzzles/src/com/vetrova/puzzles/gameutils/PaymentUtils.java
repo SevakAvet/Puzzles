@@ -1,12 +1,21 @@
 package com.vetrova.puzzles.gameutils;
 
+import android.content.SharedPreferences;
+
 public class PaymentUtils {
+	private static SharedPreferences sPref;
+	private static boolean purchased;
+
+	public static SharedPreferences getPref() {
+		return sPref;
+	}
+
+	public static void setBoolPurchased(boolean purchasedBool) {
+		purchased = purchasedBool;
+	}
 
 	public static boolean extraFeaturesHaveBeenPaid() {
-		// TODO: при добавлении возможности оплаты дополнительных функций
-		// добавить проверку, на самом ли деле пользователь этого устройства
-		// оплатил
-		return true;
+		return purchased;
 	}
 
 }

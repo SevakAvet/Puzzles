@@ -18,12 +18,11 @@ public class MainMenuActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_menu_activity);
-		
 		setListenersForMenuItems();
 	}
 
 	private void setListenersForMenuItems() {
-		OnClickListener listener = new OnMainMenuItemClickListener(this);
+		OnClickListener listener = new OnMainMenuItemClickListener(this, this);
 		for (int i = 0; i < itemsIds.length; ++i) {
 			findViewById(itemsIds[i]).setOnClickListener(listener);
 		}

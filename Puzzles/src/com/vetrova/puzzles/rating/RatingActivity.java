@@ -50,6 +50,7 @@ public class RatingActivity extends SwarmActivity {
 		final long ratingPoints = RatingCalculator.getRatingPoints();
 		Toast.makeText(this, String.valueOf(ratingPoints), Toast.LENGTH_SHORT).show();
 		Swarm.init(this, SwarmInfo.APP_ID, SwarmInfo.APP_KEY);
+		Swarm.setAllowGuests(true);
 		int leaderboardId = leaderboardId();
 		SwarmLeaderboard.submitScore(leaderboardId, ratingPoints);
 		SwarmLeaderboard.showLeaderboard(leaderboardId);
@@ -72,6 +73,7 @@ public class RatingActivity extends SwarmActivity {
 
 	private void initShowOnlyRatingMode() {
 		Swarm.init(this, SwarmInfo.APP_ID, SwarmInfo.APP_KEY);
+		Swarm.setAllowGuests(true);
 		Swarm.showLeaderboards();
 	}
 }
