@@ -3,26 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <ImageView
-        android:id="@+id/btn"
-        android:layout_width="@dimen/icon_size"
-        android:layout_height="@dimen/icon_size"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="19dp"
-        android:layout_marginTop="32dp"
-        android:src="@drawable/gallery" />
-
-    <TextView
-        android:id="@+id/textView1"
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/btn"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="5dp"
-        android:layout_toRightOf="@+id/btn"
-        android:text="Возможность загружать пользовательские изображения из галлереи"
-        android:textSize="15sp" />
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
 
 </RelativeLayout>

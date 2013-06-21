@@ -11,5 +11,9 @@
     <string name="difficult_hard">Тяжелый</string>
     <string name="gallery">Галлерея</string>
     <string name="result_text">Вы набрали (очков):</string>
+    <string name="payment_title">Платные фичи</string>
+    <string name="payment_message">Вы действительно хотите приобрести платные фичи?</string>
+    <string name="payment_yes_button">Конечно</string>
+    <string name="payment_no_button">В следующий раз</string>
 
 </resources>

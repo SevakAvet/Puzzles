@@ -11,5 +11,9 @@
     <string name="difficult_hard">Hard</string>
     <string name="gallery">Gallery</string>
     <string name="result_text">You scored (points):</string>
+    <string name="payment_title">Paid features</string>
+    <string name="payment_message">Do you really want paid features?</string>
+    <string name="payment_yes_button">Yes</string>
+    <string name="payment_no_button">No</string>
 
 </resources>

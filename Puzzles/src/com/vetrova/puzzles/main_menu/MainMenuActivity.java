@@ -22,7 +22,7 @@ public class MainMenuActivity extends Activity {
 	}
 
 	private void setListenersForMenuItems() {
-		OnClickListener listener = new OnMainMenuItemClickListener(this, this);
+		OnClickListener listener = new OnMainMenuItemClickListener(this);
 		for (int i = 0; i < itemsIds.length; ++i) {
 			findViewById(itemsIds[i]).setOnClickListener(listener);
 		}

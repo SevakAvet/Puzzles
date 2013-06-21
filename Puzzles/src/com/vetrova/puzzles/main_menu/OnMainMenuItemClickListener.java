@@ -1,13 +1,11 @@
 package com.vetrova.puzzles.main_menu;
 
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Toast;
 
 import com.vetrova.puzzles.R;
 import com.vetrova.puzzles.game.FullImageActivity;
@@ -16,14 +14,13 @@ import com.vetrova.puzzles.newgame_menu.NewGameMenuActivity;
 import com.vetrova.puzzles.payment.PaymentActivity;
 import com.vetrova.puzzles.rating.RatingActivity;
 
+
 public class OnMainMenuItemClickListener implements OnClickListener {
 	private MainMenuActivity activity;
 	private Animation anim;
-	private Context context;
 	
-	public OnMainMenuItemClickListener(MainMenuActivity activity, Context context) {
+	public OnMainMenuItemClickListener(MainMenuActivity activity) {
 		this.activity = activity;
-		this.context = context;
 		anim = AnimationUtils.loadAnimation(activity, R.anim.click_anim);
 	}
 
@@ -84,7 +81,6 @@ public class OnMainMenuItemClickListener implements OnClickListener {
 	}
 
 	private void onPaidClick() {
-		Toast.makeText(activity, "Showing paid features...", Toast.LENGTH_SHORT).show();
 		Intent intent = new Intent(activity, PaymentActivity.class);
 		activity.startActivity(intent);
 	}

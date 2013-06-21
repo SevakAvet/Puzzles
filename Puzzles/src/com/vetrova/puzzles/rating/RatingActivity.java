@@ -29,10 +29,12 @@ public class RatingActivity extends SwarmActivity {
 		firstResume = true;
 		Intent intent = getIntent();
 		mode = intent.getStringExtra(MODE);
+		Swarm.init(this, SwarmInfo.APP_ID, SwarmInfo.APP_KEY);
+		Swarm.setAllowGuests(true);
 		if (mode.equals(SHOW_RESULT_AND_RATING_MODE)) {
-			initShowResultAndRatingMode();
+			showResultAndRating();
 		} else {
-			initShowOnlyRatingMode();
+			Swarm.showLeaderboards();
 		}
 	}
 
@@ -46,11 +48,9 @@ public class RatingActivity extends SwarmActivity {
 		}
 	}
 
-	private void initShowResultAndRatingMode() {
-		final long ratingPoints = RatingCalculator.getRatingPoints();
+	private void showResultAndRating() {
+		long ratingPoints = RatingCalculator.getRatingPoints();
 		Toast.makeText(this, String.valueOf(ratingPoints), Toast.LENGTH_SHORT).show();
-		Swarm.init(this, SwarmInfo.APP_ID, SwarmInfo.APP_KEY);
-		Swarm.setAllowGuests(true);
 		int leaderboardId = leaderboardId();
 		SwarmLeaderboard.submitScore(leaderboardId, ratingPoints);
 		SwarmLeaderboard.showLeaderboard(leaderboardId);
@@ -62,18 +62,12 @@ public class RatingActivity extends SwarmActivity {
 		};
 		DimensionLoader dimensionLoader = new DimensionLoader(getResources());
 		List<Dimension> dimensions = dimensionLoader.dimensions();
-		Dimension dim = GlobalStorage.getDimension();
+		Dimension currentDimension = GlobalStorage.getDimension();
 		for (int i = 0; i < dimensions.size(); ++i) {
-			if (dim.equals(dimensions.get(i))) {
+			if (currentDimension.equals(dimensions.get(i))) {
 				return LEADERBOARD_IDS[i];
 			}
 		}
 		throw new IllegalArgumentException("Cannot get leaderboardId");
-	}
-
-	private void initShowOnlyRatingMode() {
-		Swarm.init(this, SwarmInfo.APP_ID, SwarmInfo.APP_KEY);
-		Swarm.setAllowGuests(true);
-		Swarm.showLeaderboards();
 	}
 }
