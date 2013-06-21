@@ -9,6 +9,7 @@ import android.widget.Toast;
 import com.swarmconnect.Swarm;
 import com.swarmconnect.SwarmActivity;
 import com.swarmconnect.SwarmLeaderboard;
+import com.vetrova.puzzles.R;
 import com.vetrova.puzzles.gameutils.DimensionLoader;
 import com.vetrova.puzzles.gameutils.GlobalStorage;
 import com.vetrova.puzzles.utils.Dimension;
@@ -25,6 +26,7 @@ public class RatingActivity extends SwarmActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_rating);
 		
 		firstResume = true;
 		Intent intent = getIntent();

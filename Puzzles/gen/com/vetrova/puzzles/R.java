@@ -37,20 +37,12 @@ public final class R {
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f090002;
-        public static final int activity_vertical_margin=0x7f090003;
-        public static final int gallery_margin_bottom=0x7f09000b;
-        public static final int icon_between_margin=0x7f090007;
-        public static final int icon_margin_left=0x7f090005;
-        public static final int icon_margin_top=0x7f090006;
-        public static final int icon_size=0x7f090008;
-        public static final int image_between_margin=0x7f090009;
-        public static final int image_leftRight_margin=0x7f09000a;
-        public static final int margin_left=0x7f090004;
-        public static final int radioButton_margin=0x7f09000e;
-        public static final int radioGroup_margin_top=0x7f09000d;
+        public static final int activity_horizontal_margin=0x7f090003;
+        public static final int activity_vertical_margin=0x7f090002;
+        public static final int icon_size=0x7f090005;
+        public static final int image_between_margin=0x7f090006;
+        public static final int radioButton_margin=0x7f090004;
         public static final int radio_text_size=0x7f090001;
-        public static final int scrollView_margin_top=0x7f09000c;
         public static final int text_size=0x7f090000;
     }
     public static final class drawable {
@@ -157,7 +149,7 @@ public final class R {
         public static final int swarm_x=0x7f020064;
     }
     public static final class id {
-        public static final int TextView01=0x7f0b0011;
+        public static final int TextView01=0x7f0b0010;
         public static final int achievement_check=0x7f0b0083;
         public static final int achievement_icon=0x7f0b0018;
         public static final int benefits=0x7f0b002d;
@@ -193,7 +185,7 @@ public final class R {
         public static final int facebook_login=0x7f0b0064;
         public static final int feature=0x7f0b001c;
         public static final int footer=0x7f0b003a;
-        public static final int frameLayout1=0x7f0b0010;
+        public static final int frameLayout1=0x7f0b000f;
         public static final int friend=0x7f0b0076;
         public static final int gender=0x7f0b006d;
         public static final int gender_edit=0x7f0b0078;
@@ -210,9 +202,9 @@ public final class R {
         public static final int horizontalScrollView1=0x7f0b0012;
         public static final int icon=0x7f0b0031;
         public static final int image=0x7f0b0034;
-        public static final int imageView=0x7f0b0004;
+        public static final int imageView=0x7f0b0003;
         public static final int invite=0x7f0b0058;
-        public static final int ivGallery=0x7f0b000a;
+        public static final int ivGallery=0x7f0b0009;
         public static final int ivPreview_1=0x7f0b0013;
         public static final int ivPreview_2=0x7f0b0014;
         public static final int ivPreview_3=0x7f0b0015;
@@ -220,10 +212,10 @@ public final class R {
         public static final int ivPreview_5=0x7f0b0017;
         public static final int iv_icon=0x7f0b002f;
         public static final int last_seen=0x7f0b0075;
-        public static final int layout=0x7f0b0005;
+        public static final int layout=0x7f0b0004;
         public static final int leaderboard_check=0x7f0b0084;
         public static final int list=0x7f0b0039;
-        public static final int loadItem=0x7f0b0007;
+        public static final int loadItem=0x7f0b0006;
         public static final int location=0x7f0b0072;
         public static final int login=0x7f0b0068;
         public static final int logo=0x7f0b0045;
@@ -238,16 +230,16 @@ public final class R {
         public static final int new_password=0x7f0b0088;
         public static final int newgame_check=0x7f0b0085;
         public static final int num_items=0x7f0b0092;
-        public static final int numberOfPointsTextView=0x7f0b0003;
+        public static final int numberOfPointsTextView=0x7f0b0011;
         public static final int offline_error=0x7f0b0050;
         public static final int offline_error_underline=0x7f0b0051;
-        public static final int paidItem=0x7f0b0009;
+        public static final int paidItem=0x7f0b0008;
         public static final int password=0x7f0b0029;
         public static final int password_box=0x7f0b008b;
         public static final int password_error=0x7f0b0028;
         public static final int paypal=0x7f0b0041;
         public static final int pic=0x7f0b001d;
-        public static final int playItem=0x7f0b0006;
+        public static final int playItem=0x7f0b0005;
         public static final int points=0x7f0b0019;
         public static final int popup_bottom_half=0x7f0b0036;
         public static final int popup_header=0x7f0b006c;
@@ -260,12 +252,12 @@ public final class R {
         public static final int purchase=0x7f0b007d;
         public static final int puzzlesView=0x7f0b0001;
         public static final int rank=0x7f0b005d;
-        public static final int ratingItem=0x7f0b0008;
+        public static final int ratingItem=0x7f0b0007;
         public static final int ratingLayout=0x7f0b0002;
-        public static final int rbDificultMode=0x7f0b000c;
-        public static final int rbEasy=0x7f0b000d;
-        public static final int rbHard=0x7f0b000f;
-        public static final int rbMedium=0x7f0b000e;
+        public static final int rbDificultMode=0x7f0b000b;
+        public static final int rbEasy=0x7f0b000c;
+        public static final int rbHard=0x7f0b000e;
+        public static final int rbMedium=0x7f0b000d;
         public static final int recommended_app_holder=0x7f0b0052;
         public static final int recommended_app_holder_underline=0x7f0b0053;
         public static final int reply=0x7f0b0093;
@@ -300,7 +292,7 @@ public final class R {
         public static final int text=0x7f0b0061;
         public static final int title=0x7f0b001a;
         public static final int title_holder=0x7f0b0024;
-        public static final int topMarginTextView=0x7f0b000b;
+        public static final int topMarginTextView=0x7f0b000a;
         public static final int triangle=0x7f0b0063;
         public static final int tv_name=0x7f0b0030;
         public static final int twitter=0x7f0b005a;
