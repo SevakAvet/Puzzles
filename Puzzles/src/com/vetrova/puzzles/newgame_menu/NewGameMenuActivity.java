@@ -29,6 +29,7 @@ import com.vetrova.puzzles.utils.Dimension;
 public class NewGameMenuActivity extends Activity implements OnClickListener {	
 	
 	private static final int CHOOSE_GALLERY_IMAGE = 22261;
+	private static final boolean DEBUG = true;
 	
 	private Animation anim;
 	private DimensionLoader dimensionLoader;
@@ -60,7 +61,7 @@ public class NewGameMenuActivity extends Activity implements OnClickListener {
 	}
 
 	private void disableExtraFeatures() {
-		findViewById(R.id.ivGallery).setEnabled(false);
+		findViewById(R.id.ivGallery).setEnabled(DEBUG);
 	}
 
 	public void startGame(int imageId) {
