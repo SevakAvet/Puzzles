@@ -1,7 +1,6 @@
 package com.vetrova.puzzles.main_menu;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.animation.Animation;
@@ -9,7 +8,6 @@ import android.view.animation.AnimationUtils;
 
 import com.vetrova.puzzles.R;
 import com.vetrova.puzzles.game.FullImageActivity;
-import com.vetrova.puzzles.gameutils.GlobalStorage;
 import com.vetrova.puzzles.newgame_menu.NewGameMenuActivity;
 import com.vetrova.puzzles.payment.PaymentActivity;
 import com.vetrova.puzzles.rating.RatingActivity;
@@ -56,22 +54,7 @@ public class OnMainMenuItemClickListener implements OnClickListener {
 	}
 
 	private void onContinueGameClick() {
-		Bitmap bitmap = tryLoadBitmap();
-		if (bitmap != null) {
-			GlobalStorage.setBitmap(bitmap);
-			startActivity(FullImageActivity.class);
-		} else {
-			GlobalStorage.setNotExistSavedGameAndState();
-			activity.updateItemsClickability();
-		}
-	}
-	
-	private Bitmap tryLoadBitmap() {
-		try {
-			return GlobalStorage.getBitmapDescriptor().getBitmap();
-		} catch (Exception e) {
-			return null;
-		}
+		startActivity(FullImageActivity.class);
 	}
 	
 	private void onRatingClick() {

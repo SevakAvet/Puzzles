@@ -1,6 +1,5 @@
 package com.vetrova.puzzles.gameutils;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
@@ -25,8 +24,7 @@ public class DeviceSaverLoader {
 	}
 	
 	private static SharedPreferences preferences() {
-		Activity activity = (Activity) GlobalContext.get();
-		return activity.getPreferences(Context.MODE_PRIVATE);
+		return GlobalContext.get().getSharedPreferences("preferences", Context.MODE_PRIVATE);
 	}
 	
 	public static void saveBoolean(String key, boolean value) {

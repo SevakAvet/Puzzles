@@ -15,5 +15,8 @@
     <string name="payment_message">Do you really want paid features?</string>
     <string name="payment_yes_button">Yes</string>
     <string name="payment_no_button">No</string>
+    <string name="message_problem_with_image">
+        Cannot load image. May be image too big. Please select other image
+    </string>
 
 </resources>

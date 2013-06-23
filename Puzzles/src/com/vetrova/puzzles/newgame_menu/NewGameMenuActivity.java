@@ -5,7 +5,6 @@ import java.io.File;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -23,13 +22,13 @@ import com.vetrova.puzzles.bitmap_desriptor.ResourceBitmapDescriptor;
 import com.vetrova.puzzles.game.FullImageActivity;
 import com.vetrova.puzzles.gameutils.DimensionLoader;
 import com.vetrova.puzzles.gameutils.GlobalStorage;
+import com.vetrova.puzzles.gameutils.MenuStatesUtils;
 import com.vetrova.puzzles.gameutils.PaymentUtils;
 import com.vetrova.puzzles.utils.Dimension;
 
 public class NewGameMenuActivity extends Activity implements OnClickListener {	
 	
 	private static final int CHOOSE_GALLERY_IMAGE = 22261;
-	private static final boolean DEBUG = true;
 	
 	private Animation anim;
 	private DimensionLoader dimensionLoader;
@@ -55,13 +54,8 @@ public class NewGameMenuActivity extends Activity implements OnClickListener {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		if (!PaymentUtils.extraFeaturesHaveBeenPaid()) {
-			disableExtraFeatures();
-		}
-	}
-
-	private void disableExtraFeatures() {
-		findViewById(R.id.ivGallery).setEnabled(DEBUG);
+		boolean state = PaymentUtils.extraFeaturesHaveBeenPaid();
+		MenuStatesUtils.setState(findViewById(R.id.ivGallery), state);
 	}
 
 	public void startGame(int imageId) {
@@ -71,22 +65,20 @@ public class NewGameMenuActivity extends Activity implements OnClickListener {
 	private void startGame(BitmapDescriptor descriptor) {
 		try {
 			tryStartGame(descriptor);
-		} catch (Exception e) {
-			String message = "Cannot load image.\n" + e.getMessage();
-			Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+		} catch (Throwable e) {
+			String message = "Cannot load image.\n" + "May be image too large";
+			Toast toast = Toast.makeText(this, message, Toast.LENGTH_SHORT);
+			toast.show();
 		}
 	}
 
 	private void tryStartGame(BitmapDescriptor descriptor) {
-		Bitmap bitmap = descriptor.getBitmap();
 		GlobalStorage.setBitmapDescriptor(descriptor);
-		GlobalStorage.setBitmap(bitmap);
 		GlobalStorage.setDimension(dimensionByCurrentDifficulty());
 		GlobalStorage.setTime(0);
 		GlobalStorage.setExistSavedState(false);
 		Intent intent = new Intent(this, FullImageActivity.class);
 		startActivity(intent);
-		bitmap = null;
 	}
 
 	private Dimension dimensionByCurrentDifficulty() {

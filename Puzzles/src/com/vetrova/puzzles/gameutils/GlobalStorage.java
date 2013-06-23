@@ -69,7 +69,7 @@ public class GlobalStorage {
 	public static void saveToDevice() {
 		DeviceSaverLoader.saveBoolean("ExistSavedGame", existSavedGame());
 		DeviceSaverLoader.saveBoolean("ExistSavedState", existSavedState());
-		if (existSavedGame() && existSavedState() && (getBitmap() != null)) {
+		if (existSavedGame() && existSavedState() && (getBitmapDescriptor() != null)) {
 			DeviceSaverLoader.saveBitmapDescriptor(getBitmapDescriptor());
 			DeviceSaverLoader.saveDimension(getDimension());
 			DeviceSaverLoader.savePuzzlesState(getPuzzlesState());

@@ -5,7 +5,7 @@
     <string name="new_game">Новая игра</string>
     <string name="load_game">Продолжить</string>
     <string name="rating">Рейтинг</string>
-    <string name="paid_features">Платные фичи</string>
+    <string name="paid_features">Добавить картинку</string>
     <string name="difficult_easy">Легкий</string>
     <string name="difficult_medium">Средний</string>
     <string name="difficult_hard">Тяжелый</string>
@@ -15,5 +15,8 @@
     <string name="payment_message">Вы действительно хотите приобрести платные фичи?</string>
     <string name="payment_yes_button">Конечно</string>
     <string name="payment_no_button">В следующий раз</string>
+    <string name="message_problem_with_image">
+        Невозможно загрузить. Возможно изображение слишком большое. Выберите другое изображение
+    </string>
 
 </resources>

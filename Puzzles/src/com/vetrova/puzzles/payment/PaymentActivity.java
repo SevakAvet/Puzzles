@@ -137,6 +137,8 @@ public class PaymentActivity extends Activity implements OnClickListener {
 			} else {
 				PaymentUtils.setBoolPurchased(false);
 			}
+			
+			finish();
 		};
 	};
 

@@ -53,6 +53,8 @@ public class PuzzlesView extends View {
 	private Point draggedLeftUpper;
 	
 	private Size puzzleSize;
+	
+	private boolean imageWasSet;
 
 	
 	public PuzzlesView(Context context) {
@@ -83,13 +85,14 @@ public class PuzzlesView extends View {
 		releaseImageResources();
 		setDimension(dim);
 		setBitmap(bitmap, state);
+		imageWasSet = true;
 	}
 
 	public void releaseImageResources() {
 		if (!imageWasSet()) {
 			return;
 		}
-		fullImage.recycle();
+		imageWasSet = false;
 		puzzles.forEach(new Matrix.OnEachHandler<Bitmap>() {
 			@Override
 			public void handle(Matrix<Bitmap> matrix, Position pos) {
@@ -102,7 +105,7 @@ public class PuzzlesView extends View {
 	}
 	
 	private boolean imageWasSet() {
-		return (fullImage != null);
+		return imageWasSet;
 	}
 	
 	private void setDimension(Dimension dim) {
@@ -116,6 +119,8 @@ public class PuzzlesView extends View {
 		fullImage = scaledToFullSize(bitmap);
 		cutIntoPuzzles();
 		mix(state);
+		fullImage.recycle();
+		fullImage = null;
 	}
 
 	private void draggingStopped() {

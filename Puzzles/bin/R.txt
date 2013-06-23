@@ -444,6 +444,7 @@ int string los_reset_pass 0x7f060067
 int string los_sent_pass 0x7f060068
 int string message 0x7f06009b
 int string message_from_username 0x7f060010
+int string message_problem_with_image 0x7f0600bb
 int string messages 0x7f06003a
 int string my_profile 0x7f06008b
 int string new_game 0x7f0600ae

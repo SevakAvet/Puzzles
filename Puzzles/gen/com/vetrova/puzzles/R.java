@@ -500,6 +500,7 @@ public final class R {
         public static final int los_sent_pass=0x7f060068;
         public static final int message=0x7f06009b;
         public static final int message_from_username=0x7f060010;
+        public static final int message_problem_with_image=0x7f0600bb;
         public static final int messages=0x7f06003a;
         public static final int my_profile=0x7f06008b;
         public static final int new_game=0x7f0600ae;

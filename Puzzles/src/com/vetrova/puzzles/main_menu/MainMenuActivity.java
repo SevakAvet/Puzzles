@@ -6,6 +6,7 @@ import android.view.View.OnClickListener;
 
 import com.vetrova.puzzles.R;
 import com.vetrova.puzzles.gameutils.GlobalStorage;
+import com.vetrova.puzzles.gameutils.MenuStatesUtils;
 import com.vetrova.puzzles.gameutils.PaymentUtils;
 
 public class MainMenuActivity extends Activity {
@@ -35,10 +36,10 @@ public class MainMenuActivity extends Activity {
 	}
 
 	public void updateItemsClickability() {
-		findViewById(R.id.loadItem).setClickable(loadGameClickable());
-		findViewById(R.id.paidItem).setClickable(paidClickable());
+		MenuStatesUtils.setState(findViewById(R.id.loadItem), loadGameClickable());
+		MenuStatesUtils.setState(findViewById(R.id.paidItem), paidClickable());
 	}
-	
+
 	private boolean loadGameClickable() {
 		return GlobalStorage.existSavedGame();
 	}
