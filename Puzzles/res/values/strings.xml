@@ -3,7 +3,7 @@
 
     <string name="app_name">Puzzles</string>
     <string name="new_game">New game</string>
-    <string name="load_game">Continue</string>
+    <string name="continue_game">Continue</string>
     <string name="rating">Rating</string>
     <string name="paid_features">Paid features</string>
     <string name="difficult_easy">Easy</string>

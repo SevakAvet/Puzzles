@@ -46,14 +46,14 @@
 
         <LinearLayout
             android:layout_weight="1"
-            android:id="@+id/loadItem"
+            android:id="@+id/continueGameItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
 
             <ImageView
                 android:layout_width="@dimen/icon_size"
                 android:layout_height="match_parent"
-                android:src="@drawable/load" />
+                android:src="@drawable/continue_game" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -65,7 +65,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:text="@string/load_game"
+                android:text="@string/continue_game"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textSize="@dimen/text_size" />
         </LinearLayout>

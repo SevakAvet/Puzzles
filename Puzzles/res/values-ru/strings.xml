@@ -3,7 +3,7 @@
 
     <string name="app_name">Пазлы</string>
     <string name="new_game">Новая игра</string>
-    <string name="load_game">Продолжить</string>
+    <string name="continue_game">Продолжить</string>
     <string name="rating">Рейтинг</string>
     <string name="paid_features">Добавить картинку</string>
     <string name="difficult_easy">Легкий</string>

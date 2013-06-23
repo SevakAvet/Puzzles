@@ -10,8 +10,8 @@ public class GalleryMap {
 	};
 	
 	static final int[] imagesIds = {
-		R.drawable.animal_1, R.drawable.animal_2, R.drawable.nature_1,
-		R.drawable.nature_2, R.drawable.nature_3
+		R.drawable.image_1, R.drawable.image_2, R.drawable.image_3,
+		R.drawable.image_4, R.drawable.image_5
 	};
 	
 	static int imageIdByPreviewImageViewId(int previewImageViewId) {

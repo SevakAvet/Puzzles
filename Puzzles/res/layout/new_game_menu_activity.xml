@@ -82,7 +82,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/animal_1_preview" />
+                    android:src="@drawable/preview_1" />
 
                 <ImageView
                     android:id="@+id/ivPreview_2"
@@ -90,7 +90,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/image_between_margin"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/animal_2_preview" />
+                    android:src="@drawable/preview_2" />
 
                 <ImageView
                     android:id="@+id/ivPreview_3"
@@ -98,7 +98,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/image_between_margin"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/nature_1_preview" />
+                    android:src="@drawable/preview_3" />
 
                 <ImageView
                     android:id="@+id/ivPreview_4"
@@ -106,7 +106,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/image_between_margin"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/nature_2_preview" />
+                    android:src="@drawable/preview_4" />
 
                 <ImageView
                     android:id="@+id/ivPreview_5"
@@ -114,7 +114,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/image_between_margin"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/nature_3_preview" />
+                    android:src="@drawable/preview_5" />
             </LinearLayout>
         </HorizontalScrollView>
     </FrameLayout>

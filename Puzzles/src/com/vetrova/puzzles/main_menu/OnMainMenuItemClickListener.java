@@ -30,7 +30,7 @@ public class OnMainMenuItemClickListener implements OnClickListener {
 			onPlayClick();
 			break;
 		
-		case R.id.loadItem:
+		case R.id.continueGameItem:
 			onContinueGameClick();
 			break;
 

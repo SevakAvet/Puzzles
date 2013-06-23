@@ -12,7 +12,7 @@ import com.vetrova.puzzles.gameutils.PaymentUtils;
 public class MainMenuActivity extends Activity {
 	
 	private static final int[] itemsIds = new int[] {
-			R.id.playItem, R.id.loadItem, R.id.ratingItem, R.id.paidItem
+			R.id.playItem, R.id.continueGameItem, R.id.ratingItem, R.id.paidItem
 	};
 
 	@Override
@@ -36,7 +36,7 @@ public class MainMenuActivity extends Activity {
 	}
 
 	public void updateItemsClickability() {
-		MenuStatesUtils.setState(findViewById(R.id.loadItem), loadGameClickable());
+		MenuStatesUtils.setState(findViewById(R.id.continueGameItem), loadGameClickable());
 		MenuStatesUtils.setState(findViewById(R.id.paidItem), paidClickable());
 	}
 

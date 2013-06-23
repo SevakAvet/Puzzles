@@ -46,20 +46,20 @@ public final class R {
         public static final int text_size=0x7f090000;
     }
     public static final class drawable {
-        public static final int animal_1=0x7f020000;
-        public static final int animal_1_preview=0x7f020001;
-        public static final int animal_2=0x7f020002;
-        public static final int animal_2_preview=0x7f020003;
-        public static final int dollar=0x7f020004;
-        public static final int gallery=0x7f020005;
-        public static final int load=0x7f020006;
-        public static final int nature_1=0x7f020007;
-        public static final int nature_1_preview=0x7f020008;
-        public static final int nature_2=0x7f020009;
-        public static final int nature_2_preview=0x7f02000a;
-        public static final int nature_3=0x7f02000b;
-        public static final int nature_3_preview=0x7f02000c;
-        public static final int play=0x7f02000d;
+        public static final int continue_game=0x7f020000;
+        public static final int dollar=0x7f020001;
+        public static final int gallery=0x7f020002;
+        public static final int image_1=0x7f020003;
+        public static final int image_2=0x7f020004;
+        public static final int image_3=0x7f020005;
+        public static final int image_4=0x7f020006;
+        public static final int image_5=0x7f020007;
+        public static final int play=0x7f020008;
+        public static final int preview_1=0x7f020009;
+        public static final int preview_2=0x7f02000a;
+        public static final int preview_3=0x7f02000b;
+        public static final int preview_4=0x7f02000c;
+        public static final int preview_5=0x7f02000d;
         public static final int puzzle=0x7f02000e;
         public static final int rating=0x7f02000f;
         public static final int swarm_add_friend=0x7f020010;
@@ -167,6 +167,7 @@ public final class R {
         public static final int confirm=0x7f0b0098;
         public static final int confirm_error=0x7f0b0097;
         public static final int confirm_password=0x7f0b0089;
+        public static final int continueGameItem=0x7f0b0006;
         public static final int create=0x7f0b002c;
         public static final int current_password=0x7f0b0087;
         public static final int date=0x7f0b0096;
@@ -215,7 +216,6 @@ public final class R {
         public static final int layout=0x7f0b0004;
         public static final int leaderboard_check=0x7f0b0084;
         public static final int list=0x7f0b0039;
-        public static final int loadItem=0x7f0b0006;
         public static final int location=0x7f0b0072;
         public static final int login=0x7f0b0068;
         public static final int logo=0x7f0b0045;
@@ -421,6 +421,7 @@ public final class R {
         public static final int coins_added_to_account=0x7f06000d;
         public static final int confirm_pass=0x7f060008;
         public static final int connected_social_accounts=0x7f06009f;
+        public static final int continue_game=0x7f0600af;
         public static final int create_account=0x7f060006;
         public static final int decline=0x7f060099;
         public static final int difficult_easy=0x7f0600b2;
@@ -480,7 +481,6 @@ public final class R {
         /**  Load More 
          */
         public static final int loa_load_next_25=0x7f060061;
-        public static final int load_game=0x7f0600af;
         public static final int loading=0x7f060034;
         public static final int location=0x7f06008d;
         /**  trailing space is intentional 
