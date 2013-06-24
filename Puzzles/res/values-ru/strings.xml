@@ -10,13 +10,17 @@
     <string name="difficult_medium">Средний</string>
     <string name="difficult_hard">Тяжелый</string>
     <string name="gallery">Галлерея</string>
-    <string name="result_text">Вы набрали (очков):</string>
-    <string name="payment_title">Платные фичи</string>
-    <string name="payment_message">Вы действительно хотите приобрести платные фичи?</string>
+    <string name="payment_title">Дополнительные возможности</string>
+    <string name="payment_message">
+        Вы действительно хотите приобрести возможность загрузки своих картинок?
+    </string>
     <string name="payment_yes_button">Конечно</string>
     <string name="payment_no_button">В следующий раз</string>
     <string name="message_problem_with_image">
         Невозможно загрузить. Возможно изображение слишком большое. Выберите другое изображение
+    </string>
+    <string name="message_cannot_load_from_this_folder">
+        Невозможно загрузить изображение из этой папки. Выберите другое изображение
     </string>
 
 </resources>

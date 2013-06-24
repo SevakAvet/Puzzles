@@ -1,18 +1,18 @@
 package com.vetrova.puzzles.newgame_menu;
 
-import java.io.File;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.vetrova.puzzles.R;
@@ -128,18 +128,34 @@ public class NewGameMenuActivity extends Activity implements OnClickListener {
 	}
 
 	private void onChooseGalleryImage(Uri uri) {
-		String absolutePath = absolutePathToImageByUri(uri);
-		startGame(new GalleryBitmapDescriptor(absolutePath));
+		try {
+			String path = getRealPathFromURI(uri);
+			startGame(new GalleryBitmapDescriptor(path));
+		} catch (Throwable e) {
+			notifyThatCannotLoadFromThisFolder();
+			GlobalStorage.setExistSavedGame(false);
+		}
 	}
 
-	private String absolutePathToImageByUri(Uri uri) {
-		String column = android.provider.MediaStore.Images.ImageColumns.DATA;
-		String[] projection = new String[] { column };
-		Cursor cursor = getContentResolver().query(uri, projection, null, null, null);
-		cursor.moveToFirst();
-		String imageFilePath = cursor.getString(0);
-		cursor.close();
-		File file = new File(imageFilePath);
-		return file.getAbsolutePath();
+	private String getRealPathFromURI(Uri contentURI) {
+	    Cursor cursor = getContentResolver().query(contentURI, null, null, null, null);
+	    if (cursor == null) {
+	        return contentURI.getPath();
+	    } else { 
+	        cursor.moveToFirst(); 
+	        int idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA); 
+	        return cursor.getString(idx); 
+	    }
+	}
+
+	private void notifyThatCannotLoadFromThisFolder() {
+		String message = getResources().getString(
+				R.string.message_cannot_load_from_this_folder);
+		Toast toast = Toast.makeText(this, message, Toast.LENGTH_LONG);
+		View view = toast.getView();
+		TextView text = (TextView) view.findViewById(android.R.id.message);
+		int backgroundColor = view.getSolidColor();
+		text.setBackgroundColor(backgroundColor);
+		toast.show();
 	}
 }

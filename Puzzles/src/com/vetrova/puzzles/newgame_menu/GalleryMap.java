@@ -6,12 +6,12 @@ import com.vetrova.puzzles.R;
 public class GalleryMap {
 	static final int[] previewImageViewsIds = {
 		R.id.ivPreview_1, R.id.ivPreview_2, R.id.ivPreview_3,
-		R.id.ivPreview_4, R.id.ivPreview_5
+		R.id.ivPreview_4, R.id.ivPreview_5, R.id.ivPreview_6
 	};
 	
 	static final int[] imagesIds = {
 		R.drawable.image_1, R.drawable.image_2, R.drawable.image_3,
-		R.drawable.image_4, R.drawable.image_5
+		R.drawable.image_4, R.drawable.image_5, R.drawable.image_6
 	};
 	
 	static int imageIdByPreviewImageViewId(int previewImageViewId) {

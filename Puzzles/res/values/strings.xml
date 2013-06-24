@@ -5,18 +5,22 @@
     <string name="new_game">New game</string>
     <string name="continue_game">Continue</string>
     <string name="rating">Rating</string>
-    <string name="paid_features">Paid features</string>
+    <string name="paid_features">Add picture</string>
     <string name="difficult_easy">Easy</string>
     <string name="difficult_medium">Medium</string>
     <string name="difficult_hard">Hard</string>
     <string name="gallery">Gallery</string>
-    <string name="result_text">You scored (points):</string>
-    <string name="payment_title">Paid features</string>
-    <string name="payment_message">Do you really want paid features?</string>
+    <string name="payment_title">Addition features</string>
+    <string name="payment_message">
+        You really want to get possibility of loading of your pictures?
+    </string>
     <string name="payment_yes_button">Yes</string>
     <string name="payment_no_button">No</string>
     <string name="message_problem_with_image">
         Cannot load image. May be image too big. Please select other image
+    </string>
+    <string name="message_cannot_load_from_this_folder">
+        Cannot load image from this folder. Please select other image
     </string>
 
 </resources>

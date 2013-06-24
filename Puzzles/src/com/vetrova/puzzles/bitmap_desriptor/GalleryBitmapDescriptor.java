@@ -14,6 +14,9 @@ public class GalleryBitmapDescriptor extends BitmapDescriptor {
 
 	@Override
 	public Bitmap getBitmap() {
+		if (path == null) {
+			throw new RuntimeException();
+		}
 		return BitmapFactory.decodeFile(path);
 	}
 

@@ -115,6 +115,14 @@
                     android:layout_marginLeft="@dimen/image_between_margin"
                     android:scaleType="centerCrop"
                     android:src="@drawable/preview_5" />
+
+                <ImageView
+                    android:id="@+id/ivPreview_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/image_between_margin"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/preview_6" />
             </LinearLayout>
         </HorizontalScrollView>
     </FrameLayout>
