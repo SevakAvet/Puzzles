@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="text_size">70sp</dimen>
+    <dimen name="radio_text_size">54sp</dimen>
+	<dimen name="radioButton_margin">10dp</dimen>
+    <dimen name="icon_size">200dp</dimen>
+    <dimen name="image_between_margin">10dp</dimen>
+
+</resources>
